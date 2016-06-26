@@ -1,13 +1,12 @@
 {% extends  'blog_posts/base.html' %}
+    {% block post_block %}
+        <h1>POSTS</h1>
+            {% for post in posts %}
+                <ul>
+                    <li>Title : {{ post.title }} </li>
+                    <li>Date : {{ post.date }} </li>
+                    <li>Content : {{ post.content }} ...<a href="#">Read more</a></li>
 
-{% block post_block %}
-<h1>POSTS</h1>
-    {% for post in posts %}
-        <ul>
-            <li>Title : {{ post.title }} </li>
-            <li>Date : {{ post.date }} </li>
-            <li>Content : {{ post.content }} ...<a href="#">Read more</a></li>
-
-        </ul>
-    {% endfor %}
-{% endblock %}
+                </ul>
+            {% endfor %}
+    {% endblock %}
