@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends  'blog_posts/base.html' %}
+
+{% block post_block %}
 <h1>POSTS</h1>
     {% for post in posts %}
         <ul>
@@ -14,14 +10,4 @@
 
         </ul>
     {% endfor %}
-<h1>Subjects</h1>
-    {% for subject in subjects %}
-        <h2>Title : {{ subject.title }}</h2>
-        <p>Description : {{ subject.description }}</p>
-        {% for related in subject.post_set.all %}
-            Related-post-title : {{ related.title }}
-        {% endfor %}
-
-    {% endfor %}
-</body>
-</html>
+{% endblock %}
