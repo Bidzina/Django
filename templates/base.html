@@ -6,6 +6,11 @@
 </head>
 <body>
 <h1>BASE TEMPLATE</h1>
+<ul>
+{% for subject in subjects_list %}
+    <a href="{{ subject.get_absolute_url }}"><li>Title : {{ subject.title }}</li></a>
+{% endfor %}
+ </ul>
 {% block content %}
 {% endblock %}
 </body>

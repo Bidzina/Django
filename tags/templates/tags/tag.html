@@ -1,0 +1,11 @@
+{% extends 'tags/base.html' %}
+ {% block tag_content %}
+
+    <h1>Single Tag</h1>
+     <h2>TITLE : {{ single_tag.title }}</h2>
+     <h2>This Tag is used in POSTS :</h2>
+    {% for post in single_tag.post_set.all %}
+        <p>{{ post.title }}</p>
+     {% endfor %}
+
+{% endblock %}

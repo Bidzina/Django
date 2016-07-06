@@ -1,12 +1,12 @@
+
 {% extends  'blog_posts/base.html' %}
     {% block post_block %}
-        <h1>POSTS</h1>
+       <h1>POSTS</h1>
             {% for post in posts %}
                 <ul>
                     <li>Title : {{ post.title }} </li>
                     <li>Date : {{ post.date }} </li>
-                    <li>Content : {{ post.content }} ...<a href="#">Read more</a></li>
-
+                    <li>Content : {{ post.content|slice:"0:20"}} ... <a href="{{ post.get_absolute_url }}">Read more</a></li>
                 </ul>
             {% endfor %}
     {% endblock %}

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends  'blog_posts/base.html' %}
+    {% block post_block %}
+        <h1>SINGLE POST</h1>
+                <ul>
+                    <li>Title : {{ single_post.title }} </li>
+                    <li>Date : {{ single_post.date }} </li>
+                    <li>Content : {{ single_post.content }}</li>
 
-</body>
-</html>
+                </ul>
+    {% endblock %}

@@ -1,8 +1,8 @@
 {% extends 'tags/base.html' %}
  {% block tag_content %}
 
-    <h1>Tags</h1>
+    <h1>ALL TAGS</h1>
         {% for tag in tags %}
-            <h2><a href="#">{{ tag.slug }}</a></h2>
+            <h2><a href="{{ tag.slug }}">{{ tag.title }}</a></h2>
         {% endfor %}
 {% endblock %}

@@ -1,9 +1,9 @@
-    <h1>Subjects</h1>
-    {% for subject in subjects %}
-        <h2>Title : {{ subject.title }}</h2>
-        <p>Description : {{ subject.description }}</p>
-        {% for related in subject.post_set.all %}
-            Related-post-title : {{ related.title }}
-        {% endfor %}
-
-    {% endfor %}
+{% extends  'blog_posts/base.html' %}
+    {% block post_block %}
+        <h1>Single Subject</h1>
+            <h2>Title : {{ single_subject.title }} </h2>
+            <p>Description : {{ single_subject.description }}</p>
+            {% for related in single_subject.post_set.all %}
+                Related-post-title : {{ related.title }}
+            {% endfor %}
+    {% endblock %}

@@ -8,3 +8,10 @@ def tags(request):
         'tags': tags
     }
     return render(request, 'tags/tag_list.html', obj)
+
+def single_tag(request, slug):
+    single_tag = Tag.objects.get(slug=slug)
+    obj = {
+        'single_tag' : single_tag
+    }
+    return render(request, 'tags/tag.html', obj)

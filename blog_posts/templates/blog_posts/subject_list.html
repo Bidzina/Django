@@ -1,0 +1,9 @@
+{% extends  'blog_posts/base.html' %}
+    {% block post_block %}
+        <h1>Subjects</h1>
+        {% for subject in subjects %}
+            <a href="{{ subject.slug }}"><h2>Title : {{ subject.title }}</h2></a>
+        {% endfor %}
+    {% endblock %}
+
+
